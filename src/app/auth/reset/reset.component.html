@@ -1,0 +1,28 @@
+
+<div class="form-wrapper">
+  <h2 class="form-header">{{formHeader}}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+
+      <div class="input-wrapper" [ngClass]="{'novalidate': form.get('email').invalid && form.get('email').touched}">
+        <i class="material-icons">email</i>
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Введите Email"
+          id="email"
+          formControlName="email"
+        >
+      </div>
+
+      <div class="recapcha-wrapper">
+        <wall-recapcha></wall-recapcha>
+      </div>
+
+      <button class="submit" [disabled]="form.invalid">{{formBtn}}</button>
+
+    </div>
+  </form>
+
+</div>

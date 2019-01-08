@@ -1,0 +1,70 @@
+
+<div class="form-wrapper">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+
+      <div class="input-wrapper" [ngClass]="{'novalidate': form.get('email').invalid && form.get('email').touched}">
+        <i class="material-icons">email</i>
+        <input
+          class="form-control"
+          type="email"
+          placeholder="Введите Email"
+          id="email"
+          formControlName="email"
+        >
+      </div>
+
+      <div class="btn-wrapper">
+        <button (click)="addPartner()">Вас привел партнер?</button>
+        <button (click)="routTo('/reset')">Не пришло письмо?</button>
+      </div>
+
+      <div *ngIf="onPartner" class="input-wrapper" [ngClass]="{'novalidate': form.get('partner').invalid && form.get('partner').touched}">
+        <i class="material-icons">person</i>
+        <input
+          class="form-control"
+          type="text"
+          placeholder="Логин или email партнера"
+          id="partner"
+          formControlName="partner"
+        >
+      </div>
+
+      <div class="agree-wrapper">
+        <div class="agree-row" [ngClass]="{'check-validate': form.get('termsofuseagree').invalid && form.get('termsofuseagree').touched}">
+          <input
+            class="agree-control"
+            type="checkbox"
+            id="termsofuseagree"
+            formControlName="termsofuseagree"
+          >
+          <label for="termsofuseagree">
+            <a routerLink="">Согласен с пользовательским соглашением</a>
+          </label>
+        </div>
+        <div class="agree-row" [ngClass]="{'check-validate': form.get('moneybackpolicy').invalid && form.get('moneybackpolicy').touched}">
+          <input
+            class="agree-control"
+            type="checkbox"
+            id="moneybackpolicy"
+            formControlName="moneybackpolicy"
+          >
+          <label for="moneybackpolicy">
+            <a routerLink="">Согласен с политикой возврата денег</a>
+          </label>
+        </div>
+      </div>
+
+      <div class="recapcha-wrapper">
+        <wall-recapcha></wall-recapcha>
+      </div>
+
+      <button class="submit" [disabled]="form.invalid">Зарегистрироваться</button>
+
+    </div>
+  </form>
+
+</div>
+
+

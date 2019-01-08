@@ -1,0 +1,56 @@
+@import "~src/app/auth/login/login.component";
+
+.btn-wrapper {
+  justify-content: space-between;
+  display: flex;
+  button {
+    &:active,
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.agree-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.agree-row {
+  display: inherit;
+  align-items: center;
+  label {
+    display: inherit;
+    align-items: inherit;
+    a {
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      border: 1px solid white;
+      margin-right: .5em;
+      cursor: pointer;
+    }
+  }
+  input {
+    display: none;
+    &:checked {
+      & + label {
+        &::before {
+          background: white;
+        }
+      }
+    }
+  }
+  & + & {
+    margin-top: 1.5em;
+  }
+}

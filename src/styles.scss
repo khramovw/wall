@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import "variables";
+*  {
+  //font: normal 400 $fontSize/1 $fontFamily, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  font: normal 400 $fontSize/1 $fontFamily, sans-serif;
+  background: $bgColor $mainBgImg center top / cover no-repeat fixed;
+  //box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+ul, h1, p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.container {
+  width: $containerWidth;
+  margin: 0 auto;
+  padding: 0 3em;
+}
+.img-wrapper img {
+  width: 100%;
+}
+i{
+  color: white;
+}
+.btn {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  &-default {
+    border: none;
+  }
+  :active,
+  &:focus {
+    outline: none;
+  }
+}
+.box-shadow {
+  box-shadow: $box-shadow;
+}
+.main {
+  height: 53.125em;
+  background-color: $bgColorLight;
+}
+@media screen and (max-width: 992px){
+  body {
+    font-size: 1rem;
+  }
+  .container {
+    width: 100%;
+  }
+}

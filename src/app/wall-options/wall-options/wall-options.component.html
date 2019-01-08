@@ -1,0 +1,141 @@
+
+<!--Header start-->
+<header>
+  <div class="container">
+
+    <!--Desktop header start-->
+    <div class="header-row">
+      <div class="col-6">
+
+        <div class="logo-wrapper">
+          <img src="assets/img/logo.png" alt="">
+        </div>
+
+        <div class="wallet-info">
+          <ul>
+            <li>
+              <div class="wallet-item">
+                <div class="img-wrapper">
+                  <img src="assets/img/current-ico-1.png" alt="">
+                </div>
+                <span>-0.00000000 btc</span>
+              </div>
+            </li>
+            <li>
+              <div class="wallet-item">
+                <div class="img-wrapper">
+                  <img src="assets/img/current-ico-2.png" alt="">
+                </div>
+                <span>-0.00 rub</span>
+              </div>
+            </li>
+            <li class="more-wallet"><i class="material-icons">more_vert</i></li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="col-6">
+        <div class="notification-wrapper">
+          <i class="material-icons">notifications</i>
+        </div>
+        <div class="balance-info">Баланс: 5 000 000 руб</div>
+        <div class="select-wrapper" wallSelect>
+          <div class="button-wrapper">
+            <button class="btn btn-default">RobertCollins</button>
+            <i class="material-icons">keyboard_arrow_down</i>
+          </div>
+          <ul class="select-items">
+            <li *ngFor="let item of accountSettingsNav" (click)="routTo(item.path)">{{item.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--Desktop header end-->
+
+    <!--Mobile header start @media max-width 992px-->
+    <div class="header-row mobile">
+      <div class="logo-wrapper">
+        <img src="assets/img/logo.png" alt="">
+      </div>
+      <div class="app-wrapper" (click)="toggleMenu ()">
+        <i class="material-icons">apps</i>
+      </div>
+      <div class="mobile-menu box-shadow" [ngClass]="{'open-menu': menuOpenSwitch}">
+        <header>
+          <div class="header-wrapper">
+            <div class="close" (click)="toggleMenu ()">
+              <i class="material-icons">close</i>
+            </div>
+            <div class="account-options">
+              <h1>RobertCollins</h1>
+              <ul>
+                <li (click)="menuSwitch = !menuSwitch">
+                  <i class="material-icons">{{menuSwitch ?'settings' : 'keyboard_arrow_left'}}</i>
+                  <p>{{menuSwitch ? 'Настройки профиля' : 'Навигация'}}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div class="item-wrapper">
+          <div *ngIf="!menuSwitch" class="options-menu">
+            <ul>
+              <li *ngFor="let item of accountSettingsNav" (click)="routTo(item.path)">{{item.name}}</li>
+            </ul>
+          </div>
+          <div *ngIf="menuSwitch" class="navigation-menu">
+            <ul>
+              <li *ngFor="let item of navigationMenu" (click)="routTo(item.path)" wallAcardion>
+                {{item.name}}
+                <ul class="children-item" *ngIf="item.children">
+                  <li *ngFor="let childItem of item.children">
+                    {{childItem.name}}
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--Mobile header end-->
+
+  </div>
+</header>
+<!--Header end-->
+
+<!--Main start-->
+<main>
+  <div class="container box-shadow main">
+
+    <!--Navigation start-->
+    <nav class="navigation">
+      <ul>
+        <li *ngFor="let nav of navigationMenu">
+          <div class="select-wrapper" wallSelect>
+            <div class="button-wrapper">
+              <img src="assets/img/{{nav.imgPath}}" alt="">
+              <button class="btn btn-default">{{nav.name | uppercase}}</button>
+              <i *ngIf="nav.children" class="material-icons">{{nav.navIcoPath}}</i>
+            </div>
+            <ul *ngIf="nav.children" class="select-items">
+              <li *ngFor="let child of nav.children" (click)="routTo(child.path)">{{child.name}}</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!--Navigation end-->
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+</main>
+<!--Main end-->
+
+<!--Footer start-->
+<footer></footer>
+Footer end

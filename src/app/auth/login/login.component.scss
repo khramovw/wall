@@ -1,0 +1,107 @@
+//@import "~src/app/auth/auth/auth.component";
+@import "~src/variables";
+.form-group > *:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+.input-wrapper {
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  border-radius: $border-radius;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255,255,255,.1);
+  border: 1px solid lightgray;
+
+  i {
+    color: white;
+    margin-left: .6em;
+    font-size: 1.5em;
+  }
+  &.novalidate {
+    border-color: red;
+  }
+}
+.form-control {
+  width: 88%;
+  height: 3.375em;
+  border-radius: $border-radius;
+  border: none;
+  background-color: rgba(255,255,255,0);
+  color: white;
+
+  &:active, &:focus {
+    border: none;
+    outline: none;
+  }
+}
+.btn-wrapper {
+  text-align: left;
+  button {
+    color: white;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 1em;
+    cursor: pointer;
+  }
+}
+.submit {
+  border: 1px solid white;
+  border-radius: $border-radius;
+  background-color: transparent;
+  width: 100%;
+  padding: 1.2em 0;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background: url("../../../assets/img/bg-btn.png") no-repeat center top / cover;
+  &:not(:disabled):hover {
+    background-color: rgba(255,255,255,.2);
+  }
+  &:disabled {
+    color: rgba(255,255,255,.5);
+  }
+}
+::-moz-input-placeholder{
+  transition: opacity 0.35s ease-in-out;
+  opacity: .7;
+  font-size: 1.2em;
+  color: white;
+}
+::-webkit-input-placeholder{
+  transition: opacity 0.35s ease-in-out;
+  opacity: .7;
+  font-size: 1.2em;
+  color: white;
+}
+::-ms-input-placeholder{
+  transition: opacity 0.35s ease-in-out;
+  opacity: .7;
+  font-size: 1.2em;
+  color: white;
+}
+// hover
+:hover::-moz-input-placeholder{
+  opacity: 1;
+}
+:hover::-webkit-input-placeholder{
+  opacity: 1;
+}
+:hover::-ms-input-placeholder{
+  opacity: 1;
+}
+// focus
+:focus::-moz-input-placeholder{
+  opacity: 0;
+}
+:focus::-webkit-input-placeholder{
+  opacity: 0;
+}
+:focus::-ms-input-placeholder{
+  opacity: 0;
+}
+

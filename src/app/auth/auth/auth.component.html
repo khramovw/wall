@@ -1,0 +1,44 @@
+<main>
+  <div class="container">
+    <div class="content-wrapper">
+
+      <header>
+        <div class="header-row">
+
+          <div class="wrapper-logo">
+            <img src="assets/img/logo-main.png" alt="">
+          </div>
+          <nav class="wrapper-item top">
+            <ul>
+              <li *ngFor="let item of topNavigation">
+                <a routerLink="{{item.link}}">{{item.name}}</a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+      </header>
+
+      <div class="toggle-forms">
+        <button routerLink="/login" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn">Войти</button>
+        <button routerLink="/registration" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}" class="btn">Регистрация</button>
+      </div>
+
+      <div class="form-wrapper">
+        <router-outlet></router-outlet>
+      </div>
+
+      <footer>
+        <nav class="wrapper-item bottom">
+          <ul>
+            <li *ngFor="let item of bottomNavigation">
+              <a (click)="routTo(item.link)">{{item.name}}</a>
+            </li>
+          </ul>
+        </nav>
+        <p>(С) 2016-2018 WALLBTC S.R.O. Lublaňská 267/12 Vinohrady, 120 00 Praha 2</p>
+      </footer>
+    </div>
+  </div>
+</main>
+
