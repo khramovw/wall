@@ -1,3 +1,47 @@
-<h1 style="color: white">
-  currency-balance works!
-</h1>
+
+<div class="balace-wrapper">
+  <div class="col-6">
+    <ul class="currency-items">
+      <li *ngFor="let balance of balanceList">
+        <div class="item-row">
+          <div class="label">
+            <div class="currency-label">
+              <img src="{{'assets/img/'+balance.imgPath}}" alt="{{balance.neme}}">
+            </div>
+            <div class="currency-name">{{balance.name}}</div>
+          </div>
+          <div class="controls">
+            <div class="currency-score"><span class="green">{{balance.count}}</span></div>
+            <button class="up-balance btn-current">
+              <i class="material-icons">add_circle_outline</i>
+            </button>
+            <button class="btn-current">
+              <i class="material-icons">reply</i>
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="col-6">
+    <ul class="currency-items">
+      <li>
+        <div class="item-row">
+          <div class="label">
+            <div class="currency-label">
+              <img src="assets/img/currency-3.png" alt="">
+            </div>
+            <div class="currency-name">Bitcoin</div>
+          </div>
+          <div class="controls">
+            <div class="currency-score"><span class="green">0.00002323</span></div>
+            <button class="up-balance btn-current"><img src="" alt=""></button>
+            <button class="btn-current"><img src="" alt=""></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+

@@ -8,13 +8,21 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class BalanceComponent implements OnInit {
 
+  balanceNav = [
+    {name: 'Баланс криптовалют', path: 'info', imgPath: ''},
+    {name: 'История транзакций', path: 'history', imgPath: ''}
+  ];
+
   constructor(
     private router: Router,
     private rout: ActivatedRoute
   ) { }
 
   ngOnInit() {
-    // this.router.navigate(['info'], {relativeTo: this.rout});
+    this.routTo('info');
+  }
+  routTo(path) {
+    this.router.navigate([path], {relativeTo: this.rout});
   }
 
 }

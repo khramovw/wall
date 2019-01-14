@@ -1,0 +1,28 @@
+{
+  "profile": {
+    "id": 0,
+    "name": "Robert Collins",
+    "email": "test@test",
+    "pass": "123456"
+  },
+  "currencyList": [
+    {"id": 0, "name": "bitcoin", "code": "btc", "imgPath": "currency-1.png"},
+    {"id": 1, "name": "ripple","code": "xrp","imgPath": "currency-1.png"},
+    {"id": 2, "name": "etherium", "code": "eth", "imgPath": "currency-1.png"},
+    {"id": 3, "name": "stellar", "code": "xlm", "imgPath": "currency-1.png"},
+    {"id": 4, "name": "litecoin", "code": "ltc", "imgPath": "currency-1.png"},
+    {"id": 5, "name": "dash", "code": "dsh", "imgPath": "currency-1.png"},
+    {"id": 6, "name": "bitcoincash", "code": "bcc", "imgPath": "currency-1.png"},
+    {"id": 7, "name": "peercoin", "code": "ppc", "imgPath": "currency-1.png"}
+  ],
+  "billUser": [
+    {"id": 0, "currencyId": 0, "count": "0.00003323"},
+    {"id": 1, "currencyId": 1, "count": "0.00002323"},
+    {"id": 2, "currencyId": 2, "count": "0.00002323"},
+    {"id": 3, "currencyId": 3, "count": "0.00002323"},
+    {"id": 4, "currencyId": 4, "count": "0.00002323"},
+    {"id": 5, "currencyId": 5, "count": "0.00002323"},
+    {"id": 6, "currencyId": 6, "count": "0.00002323"},
+    {"id": 7, "currencyId": 7, "count": "0.00002323"}
+  ]
+}

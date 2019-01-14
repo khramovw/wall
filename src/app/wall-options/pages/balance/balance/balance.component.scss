@@ -1,3 +1,37 @@
+@import "~src/variables";
+
+.balance-navigation {
+  padding-top: 3em;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    li {
+      border-radius: $border-radius;
+      width: calc(50% - .875em);
+    }
+  }
+}
+.balance-btn {
+  width: 100%;
+  height: 6.25em;
+  border: 1px solid #393f46;
+  display: flex;
+  align-items: center;
+  color: $colorGrey;
+
+  &:hover,
+  &.active {
+    border-color: $colorBlue;
+    color: $colorBlue;;
+    outline: none;
+    cursor: pointer;
+  }
+  span {
+    font-size: 1.25em;
+    margin-left: 1.5em;
+  }
+}
+
 .rotate-shadows {
   width: 220px;
   height: 220px;
@@ -32,4 +66,16 @@
   0% {transform: rotateZ(0deg) scaleX(1) scaleY(1);}
   50% {transform: rotateZ(-180deg) scaleX(0.95) scaleY(0.85);}
   100% {transform: rotateZ(-360deg) scaleX(1) scaleY(1);}
+}
+
+@media screen and (max-width: 992px){
+  .balance-navigation {
+    padding-top: .5em;
+    ul {
+      li {
+        font-size: .5em;
+      }
+    }
+
+  }
 }

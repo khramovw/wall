@@ -1,6 +1,13 @@
-<h1 style="color: white">
-  balance works!
-</h1>
+<nav class="balance-navigation">
+  <ul>
+    <li *ngFor="let item of balanceNav">
+      <div class="balance-btn" routerLink="{{item.path}}" routerLinkActive="active">
+        <img src="" alt="">
+        <span>{{item.name | uppercase}}</span>
+      </div>
+    </li>
+  </ul>
+</nav>
 <router-outlet></router-outlet>
 
 <div class="rotate-shadows"></div>

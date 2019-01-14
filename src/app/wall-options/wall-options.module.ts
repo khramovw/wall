@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Modules
-import {BalanceRoutingModule} from './pages/balance/balance-routing.module';
 import { WallOptionsRoutingModule } from './wall-options-routing.module';
 import { BalanceModule } from './pages/balance/balance.module';
 import { SharedModule } from '../shared/shared.module';

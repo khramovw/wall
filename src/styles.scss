@@ -15,6 +15,11 @@ ul, h1, p {
   padding: 0;
   list-style: none;
 }
+button {
+  &:active, &:focus {
+    outline: none;
+  }
+}
 .container {
   width: $containerWidth;
   margin: 0 auto;
@@ -45,11 +50,20 @@ i{
   height: 53.125em;
   background-color: $bgColorLight;
 }
+.col-6 {
+  display: flex;
+  width: 50%;
+}
+.green {
+  background-color: #1fd900;
+}
+
 @media screen and (max-width: 992px){
   body {
     font-size: 1rem;
   }
   .container {
     width: 100%;
+    padding: 0 .5em;
   }
 }
