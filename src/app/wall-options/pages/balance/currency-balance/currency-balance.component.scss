@@ -23,38 +23,7 @@
   justify-content: space-between;
   height: 3.375em;
 }
-.currency-label {
-  height: 3.3em;
-  width: 2.75em;
-  background: white;
-  position: relative;
 
-  &:before {
-    content: "";
-    height: 0;
-    width: 0;
-    position: absolute;
-    left: 2.75em;
-    top: 0;
-    border-bottom: 1.6em solid transparent;
-    border-left: 1.25em solid white;
-    border-top: 1.7em solid transparent;
-  }
-
-  img {
-    position: absolute;
-    transform: translateY(50%) translateX(50%);
-    bottom: 50%;
-    right: 50%;
-    width: 1.3125em;
-  }
-}
-.currency-name {
-  margin-left: 2em;
-  color: white;
-  font-size: .9375em;
-  font-weight: 700;
-}
 .currency-score {
   color: white;
   text-align: end;
@@ -79,6 +48,7 @@
 }
 .controls, .btn-current {
   height: inherit;
+  font-size: 1em;
 }
 .btn-current {
   width: 3.75em;

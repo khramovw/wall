@@ -20,9 +20,9 @@ import index from '@angular/cli/lib/cli';
 export class CurrencyBalanceComponent implements OnInit {
 
   balanceList = [
-    // {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-1.png'},
-    // {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-1.png'},
-    // {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-1.png'},
+    {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-1.png'},
+    {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-4.png'},
+    {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-5.png'},
   ];
   currencyList;
 
@@ -36,8 +36,8 @@ export class CurrencyBalanceComponent implements OnInit {
     this.currencyService.getBill().subscribe((bills: Bill[]) => {
       console.log('BiLL$: ', this.balanceList);
       bills.filter( (bill, i) => {
-        this.balanceList[i] = bill;
-        this.balanceList[i].name = this.currencyList[i].name;
+        // this.balanceList[i] = bill;
+        // this.balanceList[i].name = this.currencyList[i].name;
       });
 
 

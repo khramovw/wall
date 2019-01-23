@@ -6,15 +6,18 @@ import { WallOptionsComponent } from './wall-options/wall-options.component';
 import { BalanceComponent } from './pages/balance/balance/balance.component';
 import { CurrencyBalanceComponent } from './pages/balance/currency-balance/currency-balance.component';
 import { BalanceHistoryComponent } from './pages/balance/balance-history/balance-history.component';
+import {ExchangeRateComponent} from './pages/exchange-rate/exchange-rate.component';
 
 
 const routes: Routes = [
   {path: '', component: WallOptionsComponent, children: [
-      {path: 'balance', component: BalanceComponent, children: [
+      {
+        path: 'balance', component: BalanceComponent, children: [
           {path: 'info', component: CurrencyBalanceComponent},
           {path: 'history', component: BalanceHistoryComponent},
         ]
       },
+      {path: 'exchange-rate', component: ExchangeRateComponent}
     ]
   }
 ];

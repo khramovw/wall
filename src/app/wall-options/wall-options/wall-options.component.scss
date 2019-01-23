@@ -202,6 +202,9 @@ nav.navigation {
     background-color: transparent;
     button {
       text-align: center;
+      &.active {
+        color: $colorBlue;
+      }
     }
     img {
       width: 1em;

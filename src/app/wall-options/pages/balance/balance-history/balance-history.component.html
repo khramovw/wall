@@ -1,1 +1,37 @@
 
+<div class="history-info">
+
+  <div class="history-info-wrapper">
+
+    <div class="row-info">
+
+      <div *ngFor="let history of historylist" class="current-info">
+
+        <div class="wraper-info">
+          <div class="operation-type">
+            <img src="{{history.operation === 'Пополнение' ? '../../../../assets/img/plus.png' : history.operation === 'Вывод' ? '../../../../assets/img/left-arrow.png' : '../../../../assets/img/remittance.png'}}" alt="">
+            <div class="operation-type-title">{{history.operation}}</div>
+          </div>
+          <div class="summ">{{history.amount}} {{history.curency}}</div>
+          <div class="percent">{{history.percent}} {{history.curency}}</div>
+          <div class="requisites">{{history.requisites}}</div>
+        </div>
+        <!--/wraper-info-->
+
+        <div class="wraper-status">
+          <div class="coment-info">{{history.comments}}</div>
+          <div class="status-info"><span [ngClass]="{ greentext: history.status === 'Исполнено', redtext: history.status === 'Откланено', bluetext: history.status === 'Получен' }">{{history.status}}</span></div>
+          <div class="data-info">{{history.date}}</div>
+        </div>
+        <!--/wraper-status-->
+
+      </div>
+      <!--/current-info-->
+
+    </div>
+    <!--/row-info-->
+
+  </div>
+  <!--/history-info-->
+
+</div>

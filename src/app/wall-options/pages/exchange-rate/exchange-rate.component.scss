@@ -1,0 +1,83 @@
+/* EXCHANGE-RATE START*/
+@import "~src/app/shared/toggle-btn-currency";
+.balance-box {
+  position: relative;
+}
+.balance-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+}
+
+ul {
+  margin-top: 3em;
+  padding: 0 2.5em;
+}
+
+.wraper-info {
+  display: flex;
+  width: 12em;
+  justify-content: start;
+  align-items: center;
+}
+.currency-name {
+  color: white;
+  font-weight: 600;
+}
+li {
+  margin-bottom: .75em;
+}
+li:first-child .currency-name::before {
+  content: 'Название';
+  color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: -3em; }
+li:first-child .wraper-info-statistic div::before {
+  content: '';
+  color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: -3em;
+  font-weight: 700; }
+li:first-child .wraper-info-statistic .purchase-info::before {
+  content: 'Покупка'; }
+li:first-child .wraper-info-statistic .sale-info::before {
+  content: 'Продажа'; }
+li:first-child .wraper-info-statistic .dynamics-info::before {
+  content: 'Динамика'; }
+li:first-child .wraper-info-statistic .currency-code-info::before {
+  content: 'Код валюты'; }
+.current-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  height: 3.375em;
+}
+.wraper-info-statistic {
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  display: inherit;
+  width: 100%; }
+.wraper-info-statistic div:not(:last-child) {
+  width: 12em;
+  color: black; }
+.wraper-info-statistic div:last-child {
+  text-transform: uppercase;
+  width: 2em;
+  color: white; }
+.wraper-info-statistic div span {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  font-weight: 700;
+  min-width: 9em;
+  display: inline-grid;
+  align-items: center;
+  text-align: center;
+  height: 1.85em; }
+.wraper-info-statistic div:not(.dynamics-info) span {
+  background-color: #fff; }
+
+/* EXCHANGE-RATE END*/

@@ -1,0 +1,48 @@
+<!--EXCHENGE-RATE START-->
+
+<div class="balance-box">
+
+  <div class="balance-info">
+
+    <div class="toggle-curr">
+
+      <div class="title">По отношению к </div>
+
+      <div class="toggle-curr-wraper">
+        <button (click)="togleCurency($event)" class="toggle-curr-btn active-btn" autofocus>rub</button>
+        <button (click)="togleCurency($event)" class="toggle-curr-btn">usd</button>
+      </div>
+      <!--/toggle-curr-btn-->
+
+    </div>
+    <!--/toggle-curr-->
+
+    <ul class="row-info">
+
+      <li *ngFor="let currency of newObjcurrencies">
+
+        <div *ngIf="currency.rates[0].bay && against || !against && currency.rates[1].bay" class="current-info">
+
+          <div class="wraper-info">
+            <div class="currency-label">
+              <img src="{{currency.img}}" alt="{{currency.name}}">
+            </div>
+            <div class="currency-name">{{currency.name}}</div>
+          </div>
+          <div  class="wraper-info-statistic">
+            <div class="purchase-info" ><span>{{against ? currency.rates["0"].bay : currency.rates["1"].bay}}</span></div>
+            <div class="sale-info"><span>{{against ? currency.rates["0"].sell : currency.rates["1"].sell}}</span></div>
+            <div class="dynamics-info"><span [ngClass]="{ green: currency.rates[0].dinamic > 0, red: currency.rates[0].dinamic < 0 }">{{against ? currency.rates[0].dinamic : currency.rates[1].dinamic}}%</span></div>
+            <div class="currency-code-info">{{currency.code}}</div>
+          </div>
+        </div>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+</div>
+<!--EXCHENGE-RATE END-->
+

@@ -1,0 +1,108 @@
+/*!* HISTRY START *!*/
+wall-balance-history {
+  padding: 0 3.5em;
+}
+.history-info .history-info-wrapper {
+  margin-top: 4em;
+  padding: 0 ; }
+
+.greentext {
+  color: #1fd900; }
+
+.redtext {
+  color: #ff4040; }
+
+.bluetext {
+  color: #00a8ff; }
+
+.history-info.blance-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.history-info .container-coll-wrapper {
+  margin-bottom: 3em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.history-info .wraper-info,
+.history-info .wraper-status {
+  display: inherit;
+  padding: 0 1em; }
+
+.history-info .wraper-info {
+  width: 50%;
+  justify-content: space-between;
+  line-height: 3.5em;
+}
+.wraper-info .percent {
+  text-transform: uppercase;
+}
+
+.history-info .wraper-status {
+  width: 50%;
+  justify-content: space-between;
+}
+.history-info .wraper-status > *:not(:nth-child(1)) {
+  width: 30%; }
+.history-info .wraper-status > div:nth-child(1) {
+  padding: .5em 0;
+  width: 40%; }
+
+.current-info {
+  min-height: 3.375em;
+  margin: 0 1.5em;
+  color: white;
+  position: relative;
+  border: transparent;
+  display: flex;
+}
+.history-info .current-info:nth-child(2n+1) {
+  background-color: rgba(255, 255, 255, 0.1); }
+.history-info .current-info:first-child {
+  .wraper-info div::before,
+  .wraper-status div::before {
+    color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    top: -3em;
+    font-weight: 700; }
+}
+
+.history-info .current-info:first-child .operation-type::before {
+  content: 'Операция'; }
+.history-info .current-info:first-child .summ::before {
+  content: 'Сумма'; }
+.history-info .current-info:first-child .percent::before {
+  text-transform: none;
+  content: 'Процент'; }
+.history-info .current-info:first-child .requisites::before {
+  content: 'Реквизиты'; }
+.history-info .current-info:first-child .coment-info::before {
+  content: 'Коментарий'; }
+.history-info .current-info:first-child .status-info::before {
+  content: 'Статус'; }
+.history-info .current-info:first-child .data-info::before {
+  content: 'Дата'; }
+
+.history-info .operation-type {
+  display: inherit;
+  width: 40%; }
+.history-info .operation-type img {
+  margin-right: .75em;
+  width: 1.1875em; }
+
+.history-info .status-info {
+  width: 15% !important;
+  text-align: left; }
+
+.history-info .data-info {
+  text-align: right; }
+.status-info,
+.data-info {
+  line-height: 3em;
+}
+/*!* HISTRY END *!*/

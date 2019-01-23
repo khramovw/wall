@@ -20,8 +20,8 @@ export class WallOptionsComponent implements OnInit {
     {name: 'Выход', path: '/login'}
   ];
   navigationMenu = [
-    {name: 'Баланс', path: '/admin', imgPath: 'nav-ico-1.png'},
-    {name: 'Курсы валют', path: '/settings', imgPath: 'nav-ico-2.png'},
+    {name: 'Баланс', path: '/balance', imgPath: 'nav-ico-1.png'},
+    {name: 'Курсы валют', path: '/exchange-rate', imgPath: 'nav-ico-2.png'},
     {name: 'Пополнить', path: 'null', imgPath: 'nav-ico-3.png', navIcoPath: 'keyboard_arrow_down', children: [
         {name: 'В рублях', path: '/settings'},
         {name: 'В доллорах', path: '/settings'},

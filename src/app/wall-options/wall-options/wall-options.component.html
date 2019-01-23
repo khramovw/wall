@@ -116,7 +116,7 @@
           <div class="select-wrapper" wallSelect>
             <div class="button-wrapper">
               <img src="assets/img/{{nav.imgPath}}" alt="">
-              <button class="btn btn-default">{{nav.name | uppercase}}</button>
+              <button class="btn btn-default" routerLink="{{nav.path}}" routerLinkActive="active">{{nav.name | uppercase}}</button>
               <i *ngIf="nav.children" class="material-icons">{{nav.navIcoPath}}</i>
             </div>
             <ul *ngIf="nav.children" class="select-items">
