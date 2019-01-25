@@ -36,6 +36,18 @@ export class WallOptionsComponent implements OnInit {
     {name: 'Обмен', path: '/referer', imgPath: 'nav-ico-5.png'},
     {name: 'Support', path: '/vip-account', imgPath: 'nav-ico-6.png'}
   ];
+  footerMenu = [
+    [
+      {title: 'О нас', path: '/about'},
+      {title: 'Тарифы и комиссия', path: '/fees'},
+      {title: 'Курсы', path: '/exchange-rate'}
+    ],
+    [
+      {title: 'Реферальная программа', path: '/referal'},
+      {title: 'Справочный центр', path: '/reference'},
+      {title: 'Контакты', path: '/contacts'}
+    ],
+  ];
 
   constructor(
     private router: Router,
@@ -44,10 +56,10 @@ export class WallOptionsComponent implements OnInit {
 
 
   ngOnInit() {
-    this.menuSwitch = true;
     this.menuSwitch = false;
   }
 
+  // Toggle mobile menu
   toggleMenu () {
     this.menuOpenSwitch = !this.menuOpenSwitch;
     this.menuSwitch = true;
@@ -61,5 +73,11 @@ export class WallOptionsComponent implements OnInit {
       return;
     }
     this.router.navigate([path], {relativeTo: this.rout});
+  }
+
+  routToMenu (e) {
+    event.preventDefault();
+    this.router.navigate([e]);
+    window.scrollTo(0, 0);
   }
 }

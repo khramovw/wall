@@ -77,12 +77,10 @@ export class BalanceHistoryComponent implements OnInit {
       comments: '-',
       status: [2, 4],
       date: 1548325460124,
-    },
+    }
   ];
-  typeOperationClasses = {
-    greentext: '',
-    redtext: '',
-    bluetext: ''
+  configScrolBar = {
+    suppressScrollX: true,
   };
 
 
@@ -90,7 +88,7 @@ export class BalanceHistoryComponent implements OnInit {
 
   ngOnInit() {
     this.historylist = this.historyTransactions;
-    const date = Date.now();
+
     // Add icon type operation
     this.historylist.filter(el => {
       if ( el.status[1] === 3 ) {
@@ -100,7 +98,7 @@ export class BalanceHistoryComponent implements OnInit {
       } else if (el.status[1] === 5 || 6 ) {
         el.icon = 'group';
       }
-        console.log(el, date);
+        console.log(el);
     });
   }
 

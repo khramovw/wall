@@ -11,11 +11,13 @@
 .wallet-info ul {
   display: flex;
 }
+
 .wallet-item,
 .logo-wrapper,
 .wallet-info ul {
   align-items: center;
 }
+
 .header-row {
   height: 7.25em;
 }
@@ -94,6 +96,7 @@
     }
     .mobile-menu {
       position: fixed;
+      z-index: 999;
       top: 0;
       right: -100%;
       bottom: 0;
@@ -228,6 +231,7 @@ nav.navigation {
   }
 }
 // ACCOUNT INFO END
+
 @media screen and (max-width: 992px) {
   .header-row {
     display: none;
@@ -242,4 +246,144 @@ nav.navigation {
 }
 @media screen and (max-width: 767px) {
 
+}
+
+/* FOOTER SRART */
+footer {
+  margin: 5.25em 0 1.75em;
+
+  .container-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo-wrap {
+    flex-direction: column;
+    align-items: self-end;
+    justify-content: center;
+    font-size: .75em;
+
+    div {margin-top: 1em}
+
+    .rights {text-decoration: underline}
+  }
+
+  .container-coll {
+    justify-content: space-between;
+  }
+
+  .col-6 {
+    justify-content: space-between;
+
+    & + .col-6 {
+      & > div:not(:last-child) {margin-right: 3em}
+    }
+  }
+
+  .logo-wrap,
+  .logo-wrap a,
+  .info-col li {
+    color: rgba(255, 255, 255, 0.8)
+  }
+
+  .info-col {
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {margin-right: 1.25em}
+
+    li {
+      text-align: left;
+      background-color: transparent;
+      border: none;
+      padding: .75em;
+      border-radius: $border-radius;
+      font-weight: 600;
+      font-size: .75em;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #fff;
+        color: $blueText;
+      }
+    }
+  }
+
+}
+
+.soc-wrap {
+  width: 16.25em;
+  justify-content: center;
+  display: inherit}
+
+.soc-item {
+  display: flex;
+  align-items: center;
+  color: white;
+  margin-left: 1.25em;
+
+  p {padding: 0 0 0 .625em}
+}
+
+.visa-master {
+  display: inherit;
+  align-items: center;
+  border-right: 1px solid $colorGrey;
+  padding-right: 3em;
+}
+
+.app-walbtc {
+  width: 8.75em;
+  display: inherit;
+  flex-direction: column
+}
+
+.app-walbtc {
+  a:first-child img {transform: scale(1.13)}
+
+  img {width: 100%}
+}
+
+
+/* FOOTER END */
+
+@media screen and (max-width: 1024px) {
+  footer .container-row {
+    flex-direction: column;
+    font-size: 1rem;
+  }
+  footer .container-coll {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    margin-top: 26em;
+  }
+  footer .container-coll {
+    flex-direction: column;
+  }
+  footer .container-coll .logo-wrap {
+    margin-bottom: 3em;
+    margin-top: 5em;
+  }
+  footer .container-coll + .container-coll {
+    margin-top: 3em;
+  }
+  .soc-wrap a {
+    margin-left: 0;
+  }
+  .visa-master {
+    margin-top: 3em;
+  }
+  .app-walbtc {
+    flex-direction: row !important;
+    justify-content: space-between;
+    width: 100% !important;
+    margin: 3em 0;
+  }
+  .app-walbtc a {
+    width: 40%;
+  }
 }

@@ -5,9 +5,11 @@
   display: flex;
   justify-content: space-between;
 }
+
 .col-6  {
   width: calc(50% - .875em);
 }
+
 .currency-items {
   margin-top: 3em;
   width: 100%;
@@ -15,6 +17,7 @@
     margin-top: 1em;
   }
 }
+
 .item-row {
   border: 1px solid rgba(255,255,255,.4);
   border-radius: 2px;
@@ -37,19 +40,23 @@
   }
 
 }
+
 .label {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .controls {
   display: flex;
   align-items: center;
 }
+
 .controls, .btn-current {
   height: inherit;
   font-size: 1em;
 }
+
 .btn-current {
   width: 3.75em;
   background-color: transparent;
@@ -72,3 +79,21 @@
     }
 }
 /* Balance end*/
+
+@media screen and (max-width: 991px){
+  .balace-wrapper {
+    flex-direction: column;
+
+    .col-6 {
+      width: 100%;
+    }
+
+    .currency-score span {
+      font-size: 1em;
+      margin-right: .75em;
+    }
+  }
+  .currency-label:before {
+    left: 2.71em;
+  }
+}

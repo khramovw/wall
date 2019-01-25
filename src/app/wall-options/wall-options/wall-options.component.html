@@ -138,6 +138,56 @@
 </main>
 <!--Main end-->
 
-<!--Footer start-->
-<footer></footer>
-<!--Footer end-->
+<!--FOOTER START-->
+<footer>
+
+  <div class="container">
+
+    <div class="container-row">
+
+      <div class="col-6">
+
+        <div class="logo-wrap">
+          <img src="assets/img/logo.png" alt="">
+          <div class="copyright">2016-2018 © WALLBTC PTE. LTD </div>
+          <div class="rights"><a href="">Права и обязаности компании</a></div>
+        </div>
+
+        <ul *ngFor="let items of footerMenu" class="info-col">
+          <li *ngFor="let item of items" class="link-btn" (click)="routToMenu (item.path)">
+            {{item.title}}
+          </li>
+        </ul>
+
+      </div>
+      <!--/col-6-->
+
+      <div class="col-6">
+
+        <div class="soc-wrap">
+          <a href="tg://resolve?domain=@Btc_info" class="soc-item">
+            <img src="assets/img/telegram-ico.png" alt="telegramm">
+            <span class="title-soc">
+                <p> - Следите на новостями в нашем Telegram канале</p>
+              </span>
+          </a>
+        </div>
+
+        <div class="visa-master">
+          <img src="assets/img/visa-master-ico.png" alt="visa master card">
+        </div>
+
+        <div class="app-walbtc">
+          <a href="https://play.google.com/store/apps/details?id=com.bohdanuhryn.wallbtc" target="_blank"><img src="assets/img/google-play-badge.png" alt="google play"></a>
+          <a href="https://itunes.apple.com/us/app/wallbtc/id1164589961" target="_blank"><img src="assets/img/apple-store.png" alt="apple store"></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+<!--FOOTER END-->
+

@@ -1,5 +1,5 @@
 /*!* HISTRY START *!*/
-
+//@import '~perfect-scrollbar/css/perfect-scrollbar.css';
 .history-info {padding: 5.5em 3.5em}
 
 .blance-box {flex-direction: column}
@@ -39,11 +39,11 @@
 }
 
 ul {
-  height: 25em;
-  overflow: auto;
+  //height: 25em;
+  //overflow: auto;
 }
 
-li {
+.li {
   min-height: 2.5em;
   margin: 0 1.5em;
   color: white;
@@ -52,6 +52,7 @@ li {
   display: flex;
 
   &:first-child {
+    margin-top: 3em;
 
     .wrapper-info div::before,
     .wrapper-status div::before {
@@ -109,3 +110,9 @@ li {
   line-height: 2.5em;
 }
 /*!* HISTRY END *!*/
+
+@media screen and (max-width: 991px){
+  .history-info {
+    //padding: 0;
+  }
+}
