@@ -1,48 +1,47 @@
 /*!* HISTRY START *!*/
 
-.history-info {
-  padding: 5.5em 3.5em;
+.history-info {padding: 5.5em 3.5em}
+
+.blance-box {flex-direction: column}
+
+.container-coll-wrapper {
+  margin-bottom: 3em;
+  display: flex
 }
 
-
-
-.history-info.blance-box {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
-.history-info .container-coll-wrapper {
-  margin-bottom: 3em;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-
-.history-info .wrapper-info,
-.history-info .wrapper-status {
+.wrapper-info,
+.wrapper-status {
   display: inherit;
-  padding: 0 1em; }
+  padding: 0 1em
+}
 
-.history-info .wrapper-info {
+.wrapper-info {
   width: 50%;
   justify-content: space-between;
-  line-height: 2.5em;
+  line-height: 2.5em
 }
 .wrapper-info .percent {
   //text-transform: uppercase;
 }
 
-.history-info .wrapper-status {
+.wrapper-status {
   width: 50%;
   justify-content: space-between;
+
+  & > *:not(:nth-child(1)) {
+    //width: 30%
+  }
+
+  & > div:nth-child(1) {
+    padding: .5em 0;
+    width: 40%
+  }
 }
-.history-info .wrapper-status > *:not(:nth-child(1)) {
-  width: 30%; }
-.history-info .wrapper-status > div:nth-child(1) {
-  padding: .5em 0;
-  width: 40%; }
+
+ul {
+  height: 25em;
+  overflow: auto;
+}
 
 li {
   min-height: 2.5em;
@@ -51,51 +50,60 @@ li {
   position: relative;
   border: transparent;
   display: flex;
-}
-.history-info li:nth-child(2n+1) {
-  background-color: rgba(255, 255, 255, 0.1); }
-.history-info li:first-child {
-  .wrapper-info div::before,
-  .wrapper-status div::before {
-    color: rgba(255, 255, 255, 0.4);
-    position: absolute;
-    top: -3.5em;
-    font-weight: 700; }
+
+  &:first-child {
+
+    .wrapper-info div::before,
+    .wrapper-status div::before {
+      color: rgba(255, 255, 255, 0.4);
+      position: absolute;
+      top: -3.5em;
+      font-weight: 700
+    }
+
+    .operation-type::before {content: 'Операция'}
+
+    .summ::before {content: 'Сумма'}
+
+    .percent::before {
+      text-transform: none;
+      content: 'Процент'
+    }
+    .requisites::before {content: 'Реквизиты'}
+
+    .coment-info::before {
+      content: 'Коментарий';
+      top: -2.7em !important;
+    }
+
+    .status-info::before {content: 'Статус'}
+
+    .data-info::before {content: 'Дата'}
+  }
+
+  &:nth-child(2n+1) {background-color: rgba(255, 255, 255, 0.1)}
 }
 
-.history-info li:first-child .operation-type::before {
-  content: 'Операция'; }
-.history-info li:first-child .summ::before {
-  content: 'Сумма'; }
-.history-info li:first-child .percent::before {
-  text-transform: none;
-  content: 'Процент'; }
-.history-info li:first-child .requisites::before {
-  content: 'Реквизиты'; }
-.history-info li:first-child .coment-info::before {
-  content: 'Коментарий';
-  top: -2.7em !important;
-}
-.history-info li:first-child .status-info::before {
-  content: 'Статус'; }
-.history-info li:first-child .data-info::before {
-  content: 'Дата'; }
 
-.history-info .operation-type {
+.operation-type {
   display: inherit;
-  width: 40%; }
-.history-info .operation-type i {
-  margin-right: .75em;
-  width: 1.1875em;
-  line-height: unset !important;
+  width: 40%;
+
+  i {
+    margin-right: .75em;
+    width: 1.1875em;
+    line-height: unset !important;
+    font-size: 1.7em;
+  }
 }
 
-.history-info .status-info {
-  width: 15% !important;
-  text-align: left; }
+.status-info {
+  width: 15%;
+  text-align: left
+}
 
-.history-info .data-info {
-  text-align: right; }
+.data-info {text-align: right}
+
 .status-info,
 .data-info {
   line-height: 2.5em;

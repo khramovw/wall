@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @import "variables";
+
 *  {
   box-sizing: border-box;
 }
+
 body {
   font: normal 400 $fontSize/1 $fontFamily, sans-serif;
   background: $bgColor $mainBgImg center top / cover no-repeat fixed;
@@ -10,27 +12,33 @@ body {
   padding: 0;
   height: 100vh;
 }
+
 ul, h1, p {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 button {
   &:active, &:focus {
     outline: none;
   }
 }
+
 .container {
   width: $containerWidth;
   margin: 0 auto;
   padding: 0 3em;
 }
+
 .img-wrapper img {
   width: 100%;
 }
+
 i{
   color: white;
 }
+
 .btn {
   background-color: transparent;
   color: white;
@@ -43,22 +51,31 @@ i{
     outline: none;
   }
 }
+
 .box-shadow {
   box-shadow: $box-shadow;
 }
+
 .main {
   height: 53.125em;
   background-color: $mainBgColor;
 }
+
 .col-6 {
   display: flex;
   width: 50%;
 }
+
 .green {background-color: $colorGreen}
+
 .red {background-color: $сolorRed}
+
 .orangetext {color: $colorOrange}
+
 .greentext {color: $greenText}
+
 .redtext {color: $redText}
+
 .bluetext {color: $blueText}
 
 .currency-label {
@@ -78,6 +95,7 @@ i{
     border-left: 1.25em solid white;
     border-top: 1.7em solid transparent;
   }
+
   img {
     position: absolute;
     transform: translateY(50%) translateX(50%);
@@ -85,6 +103,7 @@ i{
     right: 50%;
     width: 1.3125em;
   }
+
   & + .currency-name {
     margin-left: 2em;
     color: white;
@@ -92,10 +111,12 @@ i{
     font-weight: 700;
   }
 }
+
 @media screen and (max-width: 992px){
   body {
     font-size: 1rem;
   }
+
   .container {
     width: 100%;
     padding: 0 .5em;
