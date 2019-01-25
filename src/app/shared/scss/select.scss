@@ -1,4 +1,4 @@
-@import "../../variables";
+@import "../../../variables";
 
 .select-wrapper {
   align-items: center;
@@ -14,7 +14,7 @@
     top: 100%;
     right: 0;
     text-align: center;
-    background-color: $bgColorLight;
+    background-color: $mainBgColor;
     width: 17em;
     box-shadow: $box-shadow;
     visibility: hidden;

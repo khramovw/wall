@@ -9,87 +9,99 @@ export class BalanceHistoryComponent implements OnInit {
   historylist;
   historyTransactions = [
     { id: 1,
-      operation: 'Пополнение',
-      amount: '500',
-      curency: 'rub',
-      percent: '10',
-      requisites: '410013429418058',
+      invoice: ['500', 'rub', '10', '410013429418053'],
       comments: '-',
-      status: 'Исполнено',
-      date: '11.05.18 / 08:08:08',
+      status: [0, 4],
+      date: 1548325460110,
     },
     { id: 2,
-      operation: 'Вывод',
-      amount: '500',
-      curency: 'rub',
-      percent: '10',
-      requisites: '410013429418058',
-      comments: 'Комент, он делается на пару строчек и чутка растяг, коротко обычно бывает.',
-      status: 'Откланено',
-      date: '11.05.18 / 08:08:08',
+      invoice: ['500', 'rub', '10', '410013429418054'],
+      comments: `
+      Комент, он делается на пару строчек и чутка растяг,
+       коротко обычно бывает.
+        Обычно бывает, но делается на пару строчек и чутка растяг
+        `,
+      status: [1, 5],
+      date: 1548325460110,
     },
     { id: 3,
-      operation: 'Перевод от Пользавателя',
-      amount: '500',
-      curency: 'rub',
-      percent: '10',
-      requisites: '410013429418058',
-      comments: 'Комент, он делается на пару строчек.',
-      status: 'Получен',
-      date: '11.05.18 / 08:08:08',
+      invoice: ['500', 'rub', '10', '410013429418055'],
+      comments: 'Короткий комент',
+      status: [2, 6],
+      date: 1548325460110,
+    },
+    { id: 3,
+      invoice: ['500', 'rub', '10', '410013429418056'],
+      comments: 'Комент',
+      status: [1, 3],
+      date: 1548325460110,
     },
     { id: 4,
-      operation: 'Перевод Пользавателю',
-      amount: '500',
-      curency: 'rub',
-      percent: '10',
-      requisites: '410013429418058',
-      comments: 'Комент.',
-      status: 'Исполнено',
-      date: '11.05.18 / 08:08:08',
+      invoice: ['500', 'rub', '10', '410013429418057'],
+      comments: '-',
+      status: [1, 4],
+      date: 1548325460110,
     },
     { id: 5,
-      operation: 'Пополнение',
-      amount: '500',
-      curency: 'usd',
-      percent: '10',
-      requisites: '410013429418058',
+      invoice: ['500', 'rub', '10', '410013429418058'],
       comments: '-',
-      status: 'Исполнено',
-      date: '11.05.18 / 08:08:08',
+      status: [2, 4],
+      date: 1548325460110,
     },
     { id: 6,
-      operation: 'Перевод Пользавателю',
-      amount: '500',
-      curency: 'rub',
-      percent: '10',
-      requisites: '410013429418058',
+      invoice: ['500', 'rub', '10', '410013429418058'],
       comments: '-',
-      status: 'Получен',
-      date: '11.05.18 / 08:08:08',
+      status: [2, 6],
+      date: 1548325460120,
     },
     { id: 7,
-      operation: 'Вывод',
-      amount: '500',
-      curency: 'usd',
-      percent: '10',
-      requisites: '410013429418058',
-      comments: `
-        Комент, он делается на пару строчек и чутка растяг,
-        коротко обычно бывает. Комент, он делается на пару строчек и чутка растяг,
-        коротко обычно бывает. Комент, он делается на пару строчек и чутка растяг,
-        коротко обычно бывает.
-        `,
-      status: 'Получен',
-      date: '11.05.18 / 08:08:08',
-    }
+      invoice: ['500', 'rub', '10', '410013429418058'],
+      comments: '-',
+      status: [2, 3],
+      date: 1548325460121,
+    },
+    { id: 8,
+      invoice: ['500', 'rub', '10', '410013429418058'],
+      comments: '-',
+      status: [2, 3],
+      date: 1548325460122,
+    },
+    { id: 9,
+      invoice: ['500', 'rub', '10', '410013429418058'],
+      comments: '-',
+      status: [2, 6],
+      date: 1548325460123,
+    },
+    { id: 10,
+      invoice: ['500', 'rub', '10', '410013429418058'],
+      comments: '-',
+      status: [2, 4],
+      date: 1548325460124,
+    },
   ];
+  typeOperationClasses = {
+    greentext: '',
+    redtext: '',
+    bluetext: ''
+  };
 
 
   constructor() { }
 
   ngOnInit() {
     this.historylist = this.historyTransactions;
+    const date = Date.now();
+    // Add icon type operation
+    this.historylist.filter(el => {
+      if ( el.status[1] === 3 ) {
+        el.icon = 'reply';
+      } else if ( el.status[1] === 4 ) {
+        el.icon = 'add_circle';
+      } else if (el.status[1] === 5 || 6 ) {
+        el.icon = 'group';
+      }
+        console.log(el, date);
+    });
   }
 
 }

@@ -8,12 +8,14 @@ import { CaptchaModule } from 'primeng/captcha';
 import { RecapchaComponent } from './recapcha/recapcha.component';
 import { SelectDirective } from './directive/select.directive';
 import { AcardionDirective } from './directive/acardion.directive';
+import { StatusPipe } from './pipes/status.pipe';
 
 @NgModule({
   declarations: [
     RecapchaComponent,
     SelectDirective,
-    AcardionDirective
+    AcardionDirective,
+    StatusPipe
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { AcardionDirective } from './directive/acardion.directive';
     RecapchaComponent,
     CaptchaModule,
     SelectDirective,
-    AcardionDirective
+    AcardionDirective,
+    StatusPipe
   ]
 })
 export class SharedModule { }

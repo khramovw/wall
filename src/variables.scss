@@ -4,14 +4,21 @@ $containerWidth: 101.625em;
 $fontSize: calc( 100vw / 1920 * 16 );
 $fontFamily: "Open Sans", apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial;
 $bgColor: #1c2025;
-$bgColorLight: #1e2227;
+$mainBgColor: #1e2227;
 $mainBgImg: url(assets/img/main-bg.png);
+
+$authBgImg: url(../../../assets/img/bg.jpg);
+$border-radius: .25em;
+
 
 $colorGrey: #d3d3d3;
 $colorBlue: #00a8ff;
-$bgColorRed: #ff6d6d;
-$box-shadow: 0 0 5.25em 0 rgba(0, 0, 0, 0.4);
+$colorOrange: #ff7800;
+$сolorRed: #ff4040;
+$colorGreen: #1fd900;;
 
-$mainBgColor: #1e2227;
-$authBgImg: url(../../../assets/img/bg.jpg);
-$border-radius: .25em;
+$redText: $сolorRed;
+$greenText: $colorGreen;
+$blueText: $colorBlue;
+
+$box-shadow: 0 0 5.25em 0 rgba(0, 0, 0, 0.4);
