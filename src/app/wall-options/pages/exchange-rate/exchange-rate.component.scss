@@ -101,4 +101,81 @@ li {
     }
   }
 }
+
+@media screen and (max-width: 991px){
+  ul {
+    padding: 0;
+  }
+  .wrapper-info {
+    width: 10em;
+  }
+  .currency-name {
+    font-size: .6em;
+  }
+  .wrapper-info-statistic div:last-child {
+    display: none;
+  }
+  .currency-label:before {
+    left: 0;
+    border-bottom: 0;
+    border-left: 0;
+    border-top: 0;
+  }
+  .currency-label {
+    height: 1.75em;
+    width: 1.75em;
+    background: transparent;
+    position: sticky;
+  }
+  .wrapper-info-statistic {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .2em 0 0;
+  }
+  .wrapper-info-statistic div:not(:last-child) {
+    width: 30%;
+    color: white;
+    text-align: right;
+  }
+  .wrapper-info-statistic div span {
+    border-radius: unset;
+   font-weight: 300;
+    min-width: auto;
+    /* display: inline-grid; */
+    /* align-items: center; */
+    /* text-align: center; */
+    height: auto;
+  }
+
+  .currency-label + .currency-name {
+    margin-left: .2em;
+  }
+
+  .wrapper-info-statistic div:not(.dynamics-info) span {
+    background-color:transparent;
+  }
+
+  li:first-child .wrapper-info-statistic div::before {
+    font-size: .6em;
+  }
+
+  li:first-child .wrapper-info-statistic {
+
+    .purchase-info::before,
+    .sale-info::before {
+      content: 'Покупка';
+      transform: translateX(1em);
+    }
+    .dynamics-info::before,
+    .currency-name::before {
+      transform: translateX(-1em);
+    }
+  }
+
+  .toggle-curr {
+    margin-bottom: 1em;
+    padding: 1.75em 1.5em;
+  }
+}
 /* EXCHANGE-RATE END*/
+//.sale-info

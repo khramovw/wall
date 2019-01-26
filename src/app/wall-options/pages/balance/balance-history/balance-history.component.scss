@@ -131,6 +131,7 @@ li {
         flex-direction: column;
       }
 
+      .operation-type,
       .wrapper-status,
       .wrapper-info,
       .wrapper-status > div{
@@ -141,5 +142,6 @@ li {
     .wrapper-status div::before {
       content: '';
     }
+
   }
 }
