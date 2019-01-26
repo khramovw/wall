@@ -82,6 +82,8 @@ export class BalanceHistoryComponent implements OnInit {
   configScrolBar = {
     suppressScrollX: true,
   };
+  p: number = 1;
+  // collection: any[] = someArrayOfThings;
 
 
   constructor() { }

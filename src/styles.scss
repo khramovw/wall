@@ -42,6 +42,7 @@ button {
 
 i{
   color: white;
+  font-size: 1.75em !important;
 }
 
 .btn {
@@ -115,6 +116,24 @@ i{
     font-size: .9375em;
     font-weight: 700;
   }
+}
+
+.ngx-pagination li {
+  font-size: 1.5em;
+}
+.pagination .current,
+.ngx-pagination a,
+.ngx-pagination button,
+.ngx-pagination .disabled,
+.ngx-pagination.responsive .small-screen {
+  color: white !important;
+  //font-size: 1.5em;
+  outline: none;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
 }
 
 @media screen and (max-width: 992px){

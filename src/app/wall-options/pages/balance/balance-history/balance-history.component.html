@@ -2,7 +2,7 @@
 <div class="history-info">
 
   <ul *ngIf="historylist.length; else nohistory">
-    <li *ngFor="let history of historylist;trackBy: trackByFn">
+    <li *ngFor="let history of historylist | paginate: { itemsPerPage: 7, currentPage: p };trackBy: trackByFn">
 
       <div class="wrapper-info">
         <div class="operation-type">
@@ -37,6 +37,8 @@
 
     </li>
   </ul>
+
+  <pagination-controls responsive="true" (pageChange)="p = $event"></pagination-controls>
 
   <ng-template #nohistory>
     <h2 class="greentext">{{'Здесь будет показана история' | uppercase}}</h2>

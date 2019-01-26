@@ -111,7 +111,7 @@
     }
     .header-wrapper {
       background-color: $colorBlue;
-      height: 10em;
+      min-height: 10em;
       display: flex;
       align-items: center;
       color: white;
@@ -140,6 +140,14 @@
           border: 1px solid white;
           border-radius: $border-radius;
           padding: .3em .5em;
+
+          &:first-child {
+            border: transparent;
+            margin-bottom: 2em;
+            .balance-info {
+              margin: 0;
+            }
+          }
           i {
             font-size: 1.75em;
           }

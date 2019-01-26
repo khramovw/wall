@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CaptchaModule } from 'primeng/captcha';
 
+// Perfect Scrollbar
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -10,6 +11,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
 
+// Pagination
+import { NgxPaginationModule } from 'ngx-pagination';
 
 // Components
 import { RecapchaComponent } from './recapcha/recapcha.component';
@@ -29,7 +32,8 @@ import { StatusPipe } from './pipes/status.pipe';
     FormsModule,
     ReactiveFormsModule,
     CaptchaModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    NgxPaginationModule
   ],
   exports: [
     FormsModule,
@@ -39,7 +43,8 @@ import { StatusPipe } from './pipes/status.pipe';
     SelectDirective,
     AcardionDirective,
     StatusPipe,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    NgxPaginationModule
   ],
   providers: [
     {
