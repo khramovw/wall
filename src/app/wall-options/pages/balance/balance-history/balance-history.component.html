@@ -1,8 +1,50 @@
 
 <div class="history-info">
 
-  <!--<ul class="ps" style="position: relative; max-width: 600px; max-height: 400px;" [perfectScrollbar]="config">-->
-    <!--<li *ngFor="let history of historylist">-->
+  <ul *ngIf="historylist.length; else nohistory">
+    <li *ngFor="let history of historylist;trackBy: trackByFn">
+
+      <div class="wrapper-info">
+        <div class="operation-type">
+          <i
+            class="material-icons "
+            [ngClass]="{ greentext: history.status[1] === 4, orangetext: history.status[1] === 3, bluetext: history.icon === 'group'}"
+          >
+            {{history.icon}}
+          </i>
+
+          <div class="operation-type-title">{{ history.status[1] | status }}</div>
+        </div>
+        <div class="summ">{{history.invoice[0]}} {{history.invoice[1]}}</div>
+        <div class="percent">{{history.invoice[2]}} {{history.invoice[1] | uppercase}}</div>
+        <div class="requisites">{{history.invoice[3]}}</div>
+      </div>
+      <div class="wrapper-status">
+        <div class="coment-info">{{history.comments}}</div>
+        <div class="status-info">
+            <span
+              [ngClass]="
+              {
+                greentext: history.status[0] === 1,
+                redtext: history.status[0] === 0,
+                bluetext: history.status[0] === 2
+              }"
+            >{{history.status[0] | status}}
+            </span>
+        </div>
+        <div class="data-info">{{history.date | date:'d.MM.y / h:mm:ss'}}</div>
+      </div>
+
+    </li>
+  </ul>
+
+  <ng-template #nohistory>
+    <h2 class="greentext">{{'Здесь будет показана история' | uppercase}}</h2>
+    <h4 class="greentext">{{'Вы не совершали транзакций'}}</h4>
+  </ng-template>
+
+  <!--<perfect-scrollbar style="max-height: 28em" [config]="configScrolBar">-->
+    <!--<div class="li" *ngFor="let history of historylist">-->
 
       <!--<div class="wrapper-info">-->
         <!--<div class="operation-type">-->
@@ -36,45 +78,7 @@
         <!--<div class="data-info">{{history.date | date:'d.MM.y / h:mm:ss'}}</div>-->
       <!--</div>-->
 
-    <!--</li>-->
-  <!--</ul>-->
-
-  <perfect-scrollbar style="max-height: 28em" [config]="configScrolBar">
-    <div class="li" *ngFor="let history of historylist">
-
-      <div class="wrapper-info">
-        <div class="operation-type">
-          <i
-            class="material-icons "
-            [ngClass]="{ greentext: history.status[1] === 4, orangetext: history.status[1] === 3, bluetext: history.icon === 'group'}"
-          >
-            {{history.icon}}
-          </i>
-
-          <div class="operation-type-title">{{ history.status[1] | status }}</div>
-        </div>
-        <div class="summ">{{history.invoice[0]}} {{history.invoice[1]}}</div>
-        <div class="percent">{{history.invoice[2]}} {{history.invoice[1] | uppercase}}</div>
-        <div class="requisites">{{history.invoice[3]}}</div>
-      </div>
-
-      <div class="wrapper-status">
-        <div class="coment-info">{{history.comments}}</div>
-        <div class="status-info">
-            <span
-              [ngClass]="
-              {
-                greentext: history.status[0] === 1,
-                redtext: history.status[0] === 0,
-                bluetext: history.status[0] === 2
-              }"
-            >{{history.status[0] | status}}
-            </span>
-        </div>
-        <div class="data-info">{{history.date | date:'d.MM.y / h:mm:ss'}}</div>
-      </div>
-
-    </div>
-  </perfect-scrollbar>
+    <!--</div>-->
+  <!--</perfect-scrollbar>-->
 
 </div>

@@ -20,8 +20,8 @@ import index from '@angular/cli/lib/cli';
 export class CurrencyBalanceComponent implements OnInit {
 
   balanceList = [
-    {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-1.png'},
-    {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-4.png'},
+    {id: 0, name: 'bitcoin', count: 0.00002323, imgPath: 'currency-1.png'},
+    {id: 0, name: 'bitcoin', count: 0, imgPath: 'currency-4.png'},
     {id: 0, name: 'bitcoin', count: '0.00002323', imgPath: 'currency-5.png'},
   ];
   currencyList;

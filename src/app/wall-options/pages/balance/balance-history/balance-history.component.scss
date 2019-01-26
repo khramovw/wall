@@ -1,5 +1,5 @@
 /*!* HISTRY START *!*/
-//@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
 .history-info {padding: 5.5em 3.5em}
 
 .blance-box {flex-direction: column}
@@ -16,16 +16,17 @@
 }
 
 .wrapper-info {
-  width: 50%;
   justify-content: space-between;
   line-height: 2.5em
 }
 .wrapper-info .percent {
   //text-transform: uppercase;
 }
-
-.wrapper-status {
+.wrapper-status,
+.wrapper-info {
   width: 50%;
+}
+.wrapper-status {
   justify-content: space-between;
 
   & > *:not(:nth-child(1)) {
@@ -39,11 +40,11 @@
 }
 
 ul {
-  //height: 25em;
+  height: 25em;
   //overflow: auto;
 }
 
-.li {
+li {
   min-height: 2.5em;
   margin: 0 1.5em;
   color: white;
@@ -108,11 +109,37 @@ ul {
 .status-info,
 .data-info {
   line-height: 2.5em;
-}
+};
 /*!* HISTRY END *!*/
 
 @media screen and (max-width: 991px){
   .history-info {
-    //padding: 0;
+    padding: 0;
+
+    ul {
+      height: auto;
+    }
+    li {
+      flex-direction: column;
+      margin: auto 0;
+
+      &:first-child {
+        margin-top: 3em;
+      }
+
+      & > div {
+        flex-direction: column;
+      }
+
+      .wrapper-status,
+      .wrapper-info,
+      .wrapper-status > div{
+        width: 100%;
+      }
+    }
+    .wrapper-info div::before,
+    .wrapper-status div::before {
+      content: '';
+    }
   }
 }

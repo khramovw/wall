@@ -268,7 +268,7 @@ footer {
     .rights {text-decoration: underline}
   }
 
-  .container-coll {
+  .col-6 {
     justify-content: space-between;
   }
 
@@ -352,23 +352,23 @@ footer {
     flex-direction: column;
     font-size: 1rem;
   }
-  footer .container-coll {
+  footer .col-6 {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
   footer {
-    margin-top: 26em;
+    margin-top: 6em;
   }
-  footer .container-coll {
+  footer .col-6 {
     flex-direction: column;
   }
-  footer .container-coll .logo-wrap {
+  footer .col-6 .logo-wrap {
     margin-bottom: 3em;
     margin-top: 5em;
   }
-  footer .container-coll + .container-coll {
+  footer .col-6 + .col-6 {
     margin-top: 3em;
   }
   .soc-wrap a {
@@ -381,7 +381,7 @@ footer {
     flex-direction: row !important;
     justify-content: space-between;
     width: 100% !important;
-    margin: 3em 0;
+    margin: 3em 0 0;
   }
   .app-walbtc a {
     width: 40%;

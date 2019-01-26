@@ -91,15 +91,21 @@ export class BalanceHistoryComponent implements OnInit {
 
     // Add icon type operation
     this.historylist.filter(el => {
-      if ( el.status[1] === 3 ) {
+      if ( !el ) {
+        return;
+      } else if ( el.status[1] === 3 ) {
         el.icon = 'reply';
       } else if ( el.status[1] === 4 ) {
         el.icon = 'add_circle';
       } else if (el.status[1] === 5 || 6 ) {
         el.icon = 'group';
       }
-        console.log(el);
     });
+    console.log('ekl', this.historylist);
+  }
+
+  trackByFn(index, item) {
+    return item.id;
   }
 
 }

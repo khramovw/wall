@@ -11,7 +11,7 @@
             <div class="currency-name">{{balance.name}}</div>
           </div>
           <div class="controls">
-            <div class="currency-score"><span class="green">{{balance.count}}</span></div>
+            <div class="currency-score"><span [ngClass]="{ green: balance?.count > 0 , red: !balance?.count }">{{balance.count || '0.00000000'}}</span></div>
             <button class="up-balance btn-current">
               <i class="material-icons">add_circle_outline</i>
             </button>
