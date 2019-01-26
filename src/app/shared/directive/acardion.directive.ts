@@ -14,6 +14,7 @@ export class AcardionDirective implements OnInit {
     const {nativeElement} = this.select;
 
     this.render.listen(nativeElement, 'click', (e: any) => {
+      if ( e.target.children.length === 0 ) {return; }
       e.target.children[0].classList[1]
         ? this.render.removeClass(nativeElement.children[0], 'colapsed')
           : this.render.addClass(nativeElement.children[0], 'colapsed');

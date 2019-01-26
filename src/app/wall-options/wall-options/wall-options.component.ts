@@ -69,9 +69,7 @@ export class WallOptionsComponent implements OnInit {
     if (path === '/login') {
       path = '/login';
     }
-    if (path === 'null') {
-      return;
-    }
+    if (path === 'null') {return; }
     this.router.navigate([path], {relativeTo: this.rout});
   }
 
